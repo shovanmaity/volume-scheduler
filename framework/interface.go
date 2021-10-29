@@ -79,7 +79,7 @@ type PostFilterPlugin interface {
 	// For example, a preemption plugin may choose to return nominatedNodeName, so that framework
 	// can reuse that to update the preemptor pod's .spec.status.nominatedNodeName field.
 	PostFilter(ctx context.Context, state *CycleState, volume *scpv1alpha1.StorageVolume,
-	/*, filteredNodeStatusMap NodeToStatusMap*/) (string, *Status)
+		filteredPoolStatusMap PoolToStatusMap) (string, *Status)
 }
 
 // PreScorePlugin is an interface for "PreScore" plugin. PreScore is an informational extension

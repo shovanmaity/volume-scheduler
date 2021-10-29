@@ -13,8 +13,9 @@ type PoolScoreList []PoolScore
 
 // PoolScore is a struct with pool name and score.
 type PoolScore struct {
-	Name  string
-	Score int64
+	Name      string
+	Namespace string
+	Score     int64
 }
 
 // PluginToPoolScores declares a map from plugin name to its PoolScoreList.
